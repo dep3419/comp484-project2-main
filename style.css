@@ -1,0 +1,237 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    margin: 15px;
+    background: linear-gradient(to bottom, #fff7cc, #ffdce7);
+    min-height: 100vh;
+}
+
+/* Header */
+
+header {
+    text-align: center;
+    border-bottom: 3px solid #f5a8c5;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #d85b96;
+    font-size: 2.3rem;
+    margin-bottom: 10px;
+}
+
+/* Main Layout */
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Morris Section */
+
+.pet-image-container {
+    position: relative;
+    text-align: center;
+}
+
+.pet-image {
+
+    height: 240px;
+
+    border: 5px solid #f5b4c8;
+    border-radius: 25px;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,.15);
+
+    transition: all .3s ease;
+}
+
+/* Hover animation */
+
+.pet-image:hover {
+    transform: scale(1.05);
+}
+
+/* Speech Bubble */
+
+.pet-message {
+
+    position: absolute;
+
+    top: -5px;
+
+    transform: translateX(-50%);
+
+    width: 220px;
+
+    padding: 10px;
+
+    background-color: #fff7cc;
+
+    border: 2px solid #ffd580;
+
+    border-radius: 15px;
+
+    color: #b46e00;
+
+    font-weight: bold;
+
+    box-shadow: 0 3px 10px rgba(0,0,0,.15);
+
+    z-index: 10;
+}
+
+/* Speech Bubble Tail */
+
+.pet-message::before {
+
+    content: "";
+
+    position: absolute;
+
+    bottom: -20px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    border-width: 10px;
+    border-style: solid;
+
+    border-color:
+        #ffd580
+        transparent
+        transparent
+        transparent;
+}
+
+.pet-message::after {
+
+    content: "";
+
+    position: absolute;
+
+    bottom: -16px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    border-width: 8px;
+    border-style: solid;
+
+    border-color:
+        #fff7cc
+        transparent
+        transparent
+        transparent;
+}
+
+/* Dashboard */
+
+.dashboard {
+
+    background-color: rgba(255,255,255,.80);
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    min-width: 340px;
+
+    border: 3px solid #f5b4c8;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,.12);
+
+    color: #d85b96;
+}
+
+.dashboard strong {
+
+    color: #c84a86;
+
+}
+
+.dashboard div {
+
+    margin-bottom: 12px;
+
+    padding: 4px;
+
+    font-size: 18px;
+}
+
+.button-container {
+    margin-top: 20px;
+}
+
+/* Buttons */
+
+.button-container button {
+
+    width: 90px;
+
+    padding: 10px;
+
+    margin-right: 5px;
+
+    border: none;
+
+    border-radius: 25px;
+
+    background-color: #f4a9ba;
+
+    color: #6d3366;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: all .3s ease;
+}
+
+.button-container button:hover {
+
+    background-color: #fff3a5;
+
+    transform: scale(1.08);
+}
+
+/* Effect Icon */
+
+.star {
+
+    position: absolute;
+
+    top: 80px;
+    right: 10px;
+
+    font-size: 40px;
+
+    animation: sparkle 1s ease-in-out;
+
+    z-index: 100;
+}
+
+@keyframes sparkle {
+
+    0% {
+        transform: scale(.3);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1.5);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: .8;
+    }
+}
+
